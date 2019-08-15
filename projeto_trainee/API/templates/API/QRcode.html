@@ -1,0 +1,22 @@
+{% extends 'API/base.html'%}
+{% load static %}
+{% load qr_code %}
+{% block extraheaders %}
+            <link rel="stylesheet" href="{% static "API/styles/home.css" %}">
+{% endblock %}
+{% block body %}
+<div class="centralize-column">
+    <div>
+        {% qr_from_text "Banana! 10 real" size="L" %}
+    </div>
+    <div>
+        {% qr_from_text "Maçã! 20 real" size="L" %}
+    </div>
+    <div>
+        {% qr_from_text "Ser trouxa e ler esse QR code que não tem motivo! 50 real" size="L" %}
+    </div>
+    <div>
+        {% qr_from_text "Passar no ITA! 100 real" size="L" %}
+    </div>
+</div>
+{% endblock %}

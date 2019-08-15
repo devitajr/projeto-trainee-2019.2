@@ -1,0 +1,37 @@
+{% extends 'API/base.html'%}
+{% load static %}
+{% load qr_code %}
+{% block extraheaders %}
+    <link rel="stylesheet" href="{% static "API/styles/home.css" %}">
+{% endblock %}
+{% block body %}
+    <div class="centralize-column" style="text-align:center;">
+        <div class="add-margin-10">
+            <h3 class="title">Bem vindos ao projeto trainee!</h3>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">O que fazer no projeto?<h4>
+                <p class="paragraph">O objetivo do projeto é fazer um site/app/web-app (qualquer um da sua escolha) que utilize um API de pagamentos. Com essa API, vocês irão movimentar dinheiro da conta de vocês por meio de pagamentos via QR Code!</p>
+                <p class="paragraph">O objetivo é ler o contéudo de cada pagamento pelo seu celular e depois inserir os dados que você pegou no banco de dados que irei disonibilizar</p>
+                <p class="paragraph">Depois disso, o objetivo é mostrar, em uma ou mais páginas, quanto tem a sua conta, o histórico de gastos e os nomes/dados bancários da sua conta</p>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">O que eu posso usar?</h4>
+                <p class="paragraph"> É tudo liberado! Qualquer tecnologia é válida! <strong>Entretanto</strong>, tecnologias que a ITA Jr. usam dão mais pontos. Só olhar as <a style="color: yellow;" href="{%  url 'regras' %}">regras</a> para enteder melhor!</p>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">Posso fazer sozinho?</h4>
+                <p class="paragraph" style="font-size 15px;:"><strong>Não!</strong></p> 
+                <p class="paragraph">O objetivo do projeto é vocês já começarem a se acostumar um com os outros, então todos farão em um grupo determinado por mim <a style="color: yellow;" href="{%  url 'grupos' %}">aqui</a>.</p> 
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">Socorrrro! Não consigo fazer!!!<h4>
+                <p class="paragraph"> Esse era o objetivo! Relaxa que tá tudo certo.</p>
+                <p class="paragraph"> A ideia desse projeto é ser seu primeiro contato com a computação, e um primeiro contato difícil. Geralmente, projetos de computação podem demandar muito tempo, <strong>não se sinta mal por isso</strong>. Se precisar de ajuda, só procurar qualquer membro de computação da ITA Jr. que ajudaremos!</p>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">Achei muito fácil, o que fazer agora?</h4>
+                <p class="paragraph"> Só entrar em contato comigo! Há sempre mais coisas a te passar!</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Projeto Trainee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" type="image/ico" href="{% static "API/images/logo.png" %}">
+    <link rel="stylesheet" href="{% static "API/styles/base.css" %}">
+    {% block extraheaders %}
+    {% endblock %}
+</head>
+<body style="height:100%; ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: rgb(27, 45, 89)!important; color:white!important;">
+        <a class="navbar-brand">ITA Junior</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" style="color:white!important;" href="{% url 'homePage' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white!important;" href="{% url 'regras' %}">Regras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white!important;" href="{% url 'dicas' %}">Dicas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white!important;" href="{% url 'QRcode' %}">QR code</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white!important;" href="{% url 'grupos' %}">Grupos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white!important;" href="{% url 'documentacaoAPI' %}">Documentação API</a>
+            </li>
+            </ul>
+            <span class="navbar-text" style="color:white!important;">
+            Projeto Trainee
+            </span>
+        </div>
+    </nav>
+    <div class="centralize-column margin-100">
+        <img src="{% static "API/images/inicio.png" %}" style="height:300px; width:1000px;" alt="logo ita junior">
+        <hr class="yellow-line">
+        <p> Levando seu objetivo até você</p>
+    </div>
+    <div style="height:100%; background-color: rgb(27, 45, 89); overflow:scroll;">
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>

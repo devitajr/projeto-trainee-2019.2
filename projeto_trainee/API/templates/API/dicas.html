@@ -1,0 +1,31 @@
+{% extends 'API/base.html'%}
+{% load static %}
+{% block extraheaders %}
+        <link rel="stylesheet" href="{% static "API/styles/home.css" %}">
+{% endblock %}
+{% block body %}
+<div class="centralize-column" style="text-align:center;">
+    <div class="add-margin-10">
+        <h3 class="title">Dicas</h3>
+    </div>
+    <div class="add-margin-10">
+        <h4 class="title">Se ajudem!</h4>
+            <p class="paragraph">Não é errado diferentes grupos se ajudarem! Isso é até bom! Só não copiem o código um do outro</p>
+    </div>
+    <div class="add-margin-10">
+        <h4 class="title">Não tente fugir muito do que você sabe!</h4>
+            <p class="paragraph">O intuito é mostrar novas tecnologias a cada pessoa que for participar!</p>
+            <p class="paragraph">Mas, mesmo assim, não tente dar um <strong>passo maior que a perna!</strong> Utilize as tecnologias de acordo com o seu nível e costume! Novas tecnologias <strong>não dão tanto pontos a mais</strong> na competição!</p>
+    </div>
+    <div class="add-margin-10">
+        <h4 class="title">Utilize os links que passamos e tirem dúvidas com os membros da ITA Jr!</h4>
+            <p class="paragraph">Esse desafio é beeeem difícil!</p>
+            <p class="paragraph">Então tente tirar dúvidas(quanto mais melhor) com os membros da ITA Jr.</p>
+    </div>
+    <div class="add-margin-10">
+        <h4 class="title">Nunca codei na minha vida, e agora?!?!</h4>
+            <p class="paragraph">Esse desafio é uma boa hora para aprender!</p>
+            <p class="paragraph">Se você for desenvolvedor front-end, utilize tecnologias como CSS, HTML, Javascript(nível difícil) e Bootstrap(nível médio). No back-end, escolha o aprendizado de python e descubra como usar os princípos de django ou procure na internet: <a style="color: yellow;" href="https://www.google.com/search?q=como+utilizar+uma+api&oq=como+utilizar+uma+api&aqs=chrome..69i57.3191j0j4&sourceid=chrome&ie=UTF-8">como utilizar uma API.</a></p>
+    </div>
+</div>
+{% endblock %}

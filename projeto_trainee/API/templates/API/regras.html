@@ -1,0 +1,45 @@
+{% extends 'API/base.html'%}
+{% load static %}
+{% block extraheaders %}
+    <link rel="stylesheet" href="{% static "API/styles/home.css" %}">
+{% endblock %}
+{% block body %}
+<div class="centralize-column" style="text-align:center;">
+        <div class="add-margin-10">
+            <h3 class="title">Regras pontuação</h3>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">Tecnologias utilizadas Front-End<h4>
+                <p class="paragraph">HTML+CSS - 5 pontos</p>
+                <p class="paragraph">Bibliotecas - +5 pontos cada</p>
+                <p class="paragraph">Bootstrap - 10 pontos</p>
+                <p class="paragraph">Javascript - 10 pontos</p>
+                <p class="paragraph">Bibliotecas - 20 pontos</p>
+                <p class="paragraph">Jquery - 25 pontos</p>
+                <p class="paragraph">React - 35 pontos</p>
+                <p class="paragraph">Angular - 35 pontos</p>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">Tecnologias utilizadas Back-End<h4>
+                <p class="paragraph">Node - 35 pontos</p>
+                <p class="paragraph">Django - 35 pontos</p>
+                <p class="paragraph">Bibliotecas de Back - 20 pontos cada</p>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">Estruturação<h4>
+                <p class="paragraph">Web-site: 50 pontos</p>
+                <p class="paragraph">Web-app/App: 100 pontos</p>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">Avaliação<h4>
+                <p class="paragraph">Conegue mostrar dinheiro na conta: 100 pontos</p>
+                <p class="paragraph">Consegue mostrar histórico de gastos: 100 pontos</p>
+                <p class="paragraph">Consegue mostrar nomes e dados bancários: 100 pontos</p>
+                <p class="paragraph">Dúvidas: 20 pontos por dúvida tirada</p>
+        </div>
+        <div class="add-margin-10">
+            <h4 class="title">Desafio<h4>
+                <p class="paragraph">Hackear a conta de alguém: 200 pontos</p>
+        </div>
+    </div>
+{% endblock %}
