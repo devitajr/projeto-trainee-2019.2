@@ -4,35 +4,25 @@ from django.db import models
 
 class Usuarios(models.Model):
 
-    username = models.CharField(
-        unique=True,
-        max_length=200
+    number = models.IntegerField()
+
+    nome = models.CharField(
+        max_length=200,
     )
 
-    password = models.CharField(
-        max_length=200
-    )
+class Number(models.Model):
 
-    number = models.IntegerField(
-        primary_key=True
-    )
-
-    email = models.EmailField(
-        max_length=200
-    )
+    id = models.IntegerField(primary_key=True)
 
 class Conta(models.Model):
 
     BANCHO_CHOICES = [
         ('Santander', 'Santander'),
         ('BB', 'Banco do Brasil'),
-        ('ITAU','ITAU') 
+        ('ITAU','ITAU'), 
     ]
     
-    number = models.ForeignKey(
-        'Usuarios',
-        on_delete = models.DO_NOTHING
-    )
+    number = models.IntegerField()
 
     banco = models.CharField(
         choices=BANCHO_CHOICES,
@@ -44,8 +34,6 @@ class Conta(models.Model):
         max_digits=10,
         decimal_places=2,
     )
-
-    id_conta = models.IntegerField(primary_key=True)
 
 class Gastos(models.Model):
 
@@ -60,9 +48,4 @@ class Gastos(models.Model):
         null="True"
     )
 
-    number = number = models.ForeignKey(
-        'Usuarios',
-        on_delete = models.DO_NOTHING
-    )
-
-    id_gastos = models.IntegerField(primary_key=True)
+    number = number = models.IntegerField()

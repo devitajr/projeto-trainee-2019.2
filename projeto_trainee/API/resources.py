@@ -14,7 +14,7 @@ class ContaResource(ModelResource):
 
 class GastosResource(ModelResource):
     class Meta:
-        include=['date','price','descricao_gasto']
+        include=['date','price','descricao_gasto','number','id']
         queryset=Gastos.objects.all()
         authorization = Authorization()
         resource_name = 'expense'
@@ -24,7 +24,7 @@ class GastosResource(ModelResource):
 
 class UsuarioResource(ModelResource):
     class Meta:
-        include=['number', 'username', 'password', 'email']
+        include=['number', 'nome']
         allowed_methods=['get']
         queryset=Usuarios.objects.all()
         authorization = Authorization()

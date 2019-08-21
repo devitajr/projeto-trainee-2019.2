@@ -12,10 +12,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>João</td>
-                <td>1</td>
-            </tr>
+            {% for person in persons %}
+                <tr>
+                    <td>{{person.nome}}</td>
+                    <td>{{person.number}}</td>
+                </tr>
+                
+            {% endfor %}
         </tbody>
     </table>
 </div>
